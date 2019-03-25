@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>reportarBajosSuministrosProductos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      <ion-grid>
+         <ion-row justify-content-center>
+           <ion-col align-self-center size-md="6" size-lg="5" size-xs="12" >
+              <div text-center>
+                  <h4>Reportar Producto</h4>
+              </div>
+              <form #form="ngForm" (ngSubmit)="formData(form)">
+                  <ion-select class="style" name="codigoProducto" placeholder="Codigo Producto" required ngModel>
+                      <ion-select-option [value]= "dataProduct" *ngFor="let dataProduct of listaProductos">{{dataProduct["codigo"]}}</ion-select-option>
+                  </ion-select>	
+                  <ion-item> 
+                      <ion-input name="nombreProducto" type="text" placeholder="Nombre Producto" required ngModel></ion-input>
+                  </ion-item>
+                  <ion-item> 
+                      <ion-input name="cantidadProducto" type="number" placeholder="Cantidad de Producto" required ngModel></ion-input>
+                  </ion-item>
+                  <ion-select class="style" name="tipoProducto" placeholder="Tipo Producto" required ngModel>
+                      <ion-select-option [value]= "dataProduct" *ngFor="let dataProduct of listTipoProduct">{{dataProduct["nombre"]}}</ion-select-option>
+                  </ion-select>	
+                  
+                  <div class="buttonConsultar" padding>
+                    
+                  <ion-button type="submit">Ingresar</ion-button>
+                    
+                  </div>
+              </form>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+          
+        
+
+</ion-content>

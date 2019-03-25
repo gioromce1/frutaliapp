@@ -15,7 +15,7 @@ export class HomePage implements OnInit {
 
   redirectConsultProduct(){
     //this.router.navigate(['/detail', {id:itemId}]);
-    this.router.navigate(['/reporte-product-provedor']);
+    this.router.navigate(['/consultar-producto']);
   }
 
   redirectBajoSuminis(){

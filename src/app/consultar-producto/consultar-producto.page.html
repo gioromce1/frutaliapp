@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>reporteProductProvedor</ion-title>
+    <ion-title>Consultar Producto</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,7 +13,7 @@
         </div>
         <form #form="ngForm" (ngSubmit)="formData(form)">
             <ion-item >
-              <ion-input type="text" name="codigo" ngModel required></ion-input>
+              <ion-input type="text" name="codigo" placeholder="codigo producto" ngModel required></ion-input>
             </ion-item>
             <div class="buttonConsultar" padding>
               

@@ -3,17 +3,14 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
-import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
-
-
 import { IonicModule } from '@ionic/angular';
 
-import { ConsultarProductoPage } from './consultar-producto.page';
+import { ReportarImperfectoProductoPage } from './reportar-imperfecto-producto.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: ConsultarProductoPage
+    component: ReportarImperfectoProductoPage
   }
 ];
 
@@ -22,10 +19,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes),
-  
+    RouterModule.forChild(routes)
   ],
-  providers:[BarcodeScanner],
-  declarations: [ConsultarProductoPage]
+  declarations: [ReportarImperfectoProductoPage]
 })
-export class ConsultarProductoPageModule {}
+export class ReportarImperfectoProductoPageModule {}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-reportar-bajos-suministros-productos',
@@ -6,16 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reportar-bajos-suministros-productos.page.scss'],
 })
 export class ReportarBajosSuministrosProductosPage implements OnInit {
-listaProductos=[{codigo:1001,nombre:"sabila"},{codigo:1002,nombre:"girasol"},{codigo:1003,nombre:"cactus"}]
-listTipoProduct=[{nombre:"litros"},{nombre:"kilogramos"},{nombre:"metros"},{nombre:"metros cuadrados"},{nombre:"unidad"},{nombre:"libra"}]
+  codigo="";
+  nombre="";
+  tipo="";
+  //listTipoProduct=[{nombre:"litros"},{nombre:"kilogramos"},{nombre:"metros"},{nombre:"metros cuadrados"},{nombre:"unidad"},{nombre:"libra"}]
 
-  constructor() { }
+
+
+  constructor(private activateRoute:ActivatedRoute) {
+    //console.log(this.activateRoute.snapshot.paramMap.get("codigoPlanta")," ",this.activateRoute.snapshot.paramMap.get("nombrePlanta"));
+    this.codigo=this.activateRoute.snapshot.paramMap.get("codigoPlanta");
+    this.nombre=this.activateRoute.snapshot.paramMap.get("nombrePlanta");
+    this.tipo=this.activateRoute.snapshot.paramMap.get("tipo");
+   }
 
   ngOnInit() {
   }
 
   formData(data){
-    alert("ingreso de producto "+data.value["nombreProducto"]+" exitoso");
+    alert("ingreso de producto "+this.nombre+" fue exitoso con datos: "+" codigo: "+this.codigo+" cantidad: "+data.value.cantidadProducto+" y tipo producto: "+this.tipo);
     console.log(data.value);
   }
 

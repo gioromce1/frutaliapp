@@ -19,6 +19,6 @@ export class HomePage implements OnInit {
   }
 
   redirectBajoSuminis(){
-    this.router.navigate(['/reportar-bajos-suministros-productos']);
+    this.router.navigate(['/reportar-imperfecto-producto']);
   }
 }

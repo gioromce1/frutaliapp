@@ -2,15 +2,28 @@
 
 .buttonConsultar{
     
-    text-align: center;
+    text-align:left;
+    align:left;
     
     
      
  }
- .buttonConsultar ion-button{
-     --ion-color-primary: #38801f;
-     align-items: center;
-     width: 60%;
+ .buttonConsultar ion-item ion-button{
+     --ion-color-primary: #38801f ;
+     //align-items: center;
+     font-size: 65%; 
+     width:50%;
      
  }
- 
+ .botonesConsultar{
+    text-align:left;
+    align:left;
+    
+    
+ }
+ .botonesConsultar ion-item ion-button{
+    --ion-color-primary: #38801f ;
+    //align-items: center;
+    font-size: 70%; 
+    width:75%;
+ }

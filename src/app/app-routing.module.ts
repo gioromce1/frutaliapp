@@ -6,7 +6,8 @@ const routes: Routes = [
   { path: 'codigoqr', loadChildren: './codigoqr/codigoqr.module#CodigoqrPageModule' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'reportar-bajos-suministros-productos', loadChildren: './reportar-bajos-suministros-productos/reportar-bajos-suministros-productos.module#ReportarBajosSuministrosProductosPageModule' },
-  { path: 'consultar-producto', loadChildren: './consultar-producto/consultar-producto.module#ConsultarProductoPageModule' }
+  { path: 'consultar-producto', loadChildren: './consultar-producto/consultar-producto.module#ConsultarProductoPageModule' },
+  { path: 'reportar-imperfecto-producto', loadChildren: './reportar-imperfecto-producto/reportar-imperfecto-producto.module#ReportarImperfectoProductoPageModule' }
 ];
 @NgModule({
   imports: [

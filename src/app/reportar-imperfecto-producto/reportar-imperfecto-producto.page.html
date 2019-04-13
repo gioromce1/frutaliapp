@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>reportarBajosSuministrosProductos</ion-title>
+    <ion-title>ReportarImperfectoProducto</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -9,7 +9,7 @@
          <ion-row justify-content-center>
            <ion-col align-self-center size-md="6" size-lg="5" size-xs="12" >
               <div text-center>
-                  <h4>Reportar Producto</h4>
+                  <h4>Reportar Imperfecto Producto</h4>
               </div>
               <form #form="ngForm" (ngSubmit)="formData(form)">
                   <ion-item>
@@ -19,22 +19,16 @@
                     <ion-input required [(ngModel)]=nombre [ngModelOptions]="{standalone: true}"></ion-input>
                   </ion-item>
                   <ion-item> 
-                      <ion-input name="cantidadProducto" type="number" placeholder="Cantidad de Producto" required ngModel></ion-input>
+                      <ion-input name="descripcion" type="text" placeholder="Descripcion Daño" required ngModel></ion-input>
                   </ion-item>
-                  <ion-item>
-                      <ion-input required name="tipo" [(ngModel)]=tipo [ngModelOptions]="{standalone: true}"></ion-input> 
-                  </ion-item>
-                  
-                  <div class="buttonConsultar" padding>
-                    
-                  <ion-button type="submit">Ingresar</ion-button>
-                    
+                  <div class="boton" padding> 
+                  <ion-button name="boton" type="submit">Reportar</ion-button>  
                   </div>
+                  
               </form>
             </ion-col>
           </ion-row>
         </ion-grid>
-          
-        
 
 </ion-content>
+
